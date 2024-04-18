@@ -1,0 +1,21 @@
+import { useState, useEffect } from "react";
+import NoteList from "./Notelist";
+import NoteForm from "./Noteform";
+
+
+
+
+const App = () => {
+
+  const baseUrl = 'http://localhost:3001/api/notes'
+  return (
+    <div>
+      <h1>Notes</h1>
+      <NoteList baseUrl={baseUrl} />
+      <NoteForm baseUrl={baseUrl} />
+      
+    </div>
+  );
+};
+
+export default App;
